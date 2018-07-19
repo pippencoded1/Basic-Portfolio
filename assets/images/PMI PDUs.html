@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CCRS | Project Management Institute</title>
+
+    <link rel="shortcut icon" href="/content/images/favicon.ico">
+
+    <link href="/content/kendo/2014.3.1411/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/kendo/2014.3.1411/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/kendo/2014.3.1411/kendo.dataviz.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/kendo/2014.3.1411/kendo.default.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/kendo/2014.3.1411/kendo.dataviz.default.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="//static.pmi.org/css/fxm.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/less/typography.css" rel="stylesheet" type="text/css" />
+    <link href="/content/less/ccrs-all.css" rel="stylesheet" type="text/css" />
+    <link href="/content/fonts/styles.pmi.css" rel="stylesheet" type="text/css" />
+    <link href="/content/font-awesome-4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/css/spinner.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="//static.pmi.org/ui/js/adobe-typekit.js"></script>
+
+    <script src="/scripts/kendo/2014.3.1411/jquery.min.js"></script>
+    <script src="/scripts/kendo/2014.3.1411/jszip.min.js"></script>
+    <script src="/scripts/kendo/2014.3.1411/kendo.all.min.js"></script>
+    <script src="/scripts/kendo/2014.3.1411/kendo.aspnetmvc.min.js"></script>
+    <script src="/scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="/scripts/kendo.modernizr.custom.js"></script>
+    <script src="/content/scripts/jquery.cookie.js"></script>
+
+    <link href="/scripts/slick-1.6.0/slick.css" rel="stylesheet" type="text/css" />
+    <link href="/scripts/slick-1.6.0/slick-theme.css" rel="stylesheet" type="text/css" />
+    <script src="/scripts/slick-1.6.0/slick.min.js"></script>
+    
+    <script type="text/javascript">
+        function loadChatJs() {
+            $.getScript('//static.pmi.org/Handlers/Chat.ashx?ChannelKey=Chat.CCRS');
+        }
+
+        loadChatJs();
+
+        setInterval(function() {
+            loadChatJs();
+        }, 60*1000);
+
+    </script>
+
+    <script type="text/javascript">
+        var PmiTag = {};
+        var vAdobeAnalyticsEnabled = 'True'
+    </script>
+
+        <script type="text/javascript" src="//static.pmi.org/ui/js/userzoom.js"></script>
+
+        <script type="text/javascript" src="//assets.adobedtm.com/03ad39fafa02133c35e97f5756ab32af488fe480/satelliteLib-43300bf8ef343e55c6489feb01393ff2c4037eb9.js"></script>
+</head>
+<body id="login">
+    <nav id="mobile" class="navigation">
+        <div class="user-profile">
+        </div>
+        
+
+<ul>
+        <li id="loginsidebar" class="selected">
+            <a href="/login" onclick="LogWebAnalyticsButtonClick(this, 'Click: CCRS | Left Nav | Login');">
+                <span class="icon icon-profile-1 filled-in"></span>
+                <span>Log In</span>
+            </a>
+        </li>
+    <li id="search" >
+        <a href="/search" onclick="LogWebAnalyticsButtonClick(this, 'Click: CCRS | Left Nav | Search Activities');">
+            <span class="icon icon-magnifier"></span>
+            <span>Search Activities</span>
+        </a>
+    </li>
+    <li id="resources" >
+        <a href="/info/handbooksguides" onclick="LogWebAnalyticsButtonClick(this, 'Click: CCRS | Left Nav | Resources');">
+            <span class="icon icon-thumbnails-1"></span>
+            <span>Handbooks &amp; Guides</span>
+        </a>
+    </li>
+</ul>
+    </nav>
+    <div id="wrapper">
+        <script>
+	jQuery(function(){jQuery("#user-alerts-mobile a").kendoTooltip({"show":alertsTooltipShow,"contentLoad":tooltipLoad,"error":alertsError,"hide":alertsTooltipHide,"autoHide":false,"showOn":"click","content":{"url":"/info/alerts"}});});
+</script>
+<header class="banner">
+    <div id="site-header-mobile">
+        <div class="menu"><a href="javascript:void(0);" id="drawer-trigger">Menu</a></div>
+            <h1 class="logo"><a href="/dashboard">PMI</a></h1>
+            </div>
+    <div id="site-header">
+        <a href="/dashboard"><div class="pmi-logo"></div></a>
+        <h1>Continuing Certification Requirements System</h1>
+        <div>
+            <nav id="utility">
+                
+<ul>
+    <li><a href="http://www.pmi.org">PMI.org</a></li>
+    <li><a href="http://www.pmi.org/about">About PMI</a></li>
+    <li><a href="http://www.pmi.org/help/ccrs_user/default.htm" onclick="LogWebAnalyticsButtonClick(this, 'Click: CCRS | Help Section');" >Help</a></li>
+    <li class="last"><a href="http://www.pmi.org/about/contact" >Contact</a></li>
+</ul>
+            </nav>
+            <div class="user-actions">
+            </div>
+        </div>
+    </div>
+
+</header>
+
+        
+    <style type="text/css">
+        .sticky {
+            position: fixed;
+            top: 0;
+        }
+
+        .chatBanner {
+            left: 0;
+            top: 0;
+            padding: 10px;
+            line-height: normal;
+            font-weight: 400;
+            font-size: 13px;
+            background-color: rgb(218, 241, 249);
+            text-align: center;
+            width: 100%;
+            z-index: 100;
+            position: sticky;
+            position: -webkit-sticky;
+        }
+
+        .chat-button {
+            background: rgba(0, 101, 189, 1) url('/content/images/chat.png') no-repeat top left;
+            background-position: 5px 5px;
+            background-size: 20px;
+            color: white;
+            padding: 5px 5px 5px 30px !important;
+            border-radius: 5px;
+            border-color: transparent;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+        .chat-button:disabled,
+        .chat-button[disabled] {
+            background: rgba(200, 200, 200, 1) url('/content/images/chat.png') no-repeat top left;
+            background-position: 5px 5px;
+            background-size: 20px;
+            color: white;
+            padding: 5px 5px 5px 30px !important;
+            border-radius: 5px;
+            border-color: transparent;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+        .message-bold {
+            font-weight: bold;
+        }
+
+        .standard-hours-icon {
+            padding-left: 5px;
+        }
+    </style>
+<script type="text/javascript">
+    function stickBanner() {
+        var windowTop = $(window).scrollTop();
+        var bannerTop = $('#chat-banner').offset().top;
+        if (windowTop > bannerTop)
+            $('#chat-banner').addClass('sticky');
+        else
+            $('#chat-banner').removeClass('sticky');
+    }
+
+    var username = '';
+</script>
+
+    <script>
+        username = '';
+    </script>
+<div id="banner-anchor"></div>
+<div id="chat-banner" class="chatBanner">
+    <div style="display: inline-block; vertical-align: middle">
+        <div>
+            <span class="message-bold" id="chat-message"></span>
+            <span id="chat-hours"></span><span class="standard-hours-icon" title=""><a href="#"><img src="//static.pmi.org/assets/img/icon-clock.svg" height="16" width="16"/></a></span>
+        </div>
+        <div>
+            <span id="availability-message"></span>
+        </div>
+    </div>
+    <div style="display: inline-block; vertical-align: middle">
+        <input id="chat-button" class="chat-button" type="button" value="Chat Now" onclick="ChatRequest();" />
+    </div>
+</div>
+        <div id="content-body">
+            <section id="navigation-sidebar" class="navigation">
+                <div class="navigation-content-wrapper">
+                    <nav id="primary">
+                        
+
+<ul>
+        <li id="loginsidebar" class="selected">
+            <a href="/login" onclick="LogWebAnalyticsButtonClick(this, 'Click: CCRS | Left Nav | Login');">
+                <span class="icon icon-profile-1 filled-in"></span>
+                <span>Log In</span>
+            </a>
+        </li>
+    <li id="search" >
+        <a href="/search" onclick="LogWebAnalyticsButtonClick(this, 'Click: CCRS | Left Nav | Search Activities');">
+            <span class="icon icon-magnifier"></span>
+            <span>Search Activities</span>
+        </a>
+    </li>
+    <li id="resources" >
+        <a href="/info/handbooksguides" onclick="LogWebAnalyticsButtonClick(this, 'Click: CCRS | Left Nav | Resources');">
+            <span class="icon icon-thumbnails-1"></span>
+            <span>Handbooks &amp; Guides</span>
+        </a>
+    </li>
+</ul>
+                    </nav>
+                </div>
+            </section>
+            <section class="content-wrapper main-content clear-fix">
+                
+
+
+<article class="login">
+    <h2>Continuing Certification Requirements System</h2>
+    <div class="column-container-row">
+        <section class="column column-span-2">
+            <h2>PMI Login</h2>
+                <form action="/login/authenticate" method="post">                    <div class="login-form">
+                        <p>
+                            <span class="row">
+                                <label>Username</label>
+                                <input class="k-textbox" id="Username" name="Username" required="true" type="text" value="" />
+                                <span class="invalid-msg-placeholder">
+                                    <span class="k-invalid-msg" data-for="Username"></span>
+                                </span>
+                            </span>
+                            <span class="row">
+                                <label>Password</label>
+                                <input class="k-textbox" id="Password" name="Password" required="true" type="password" />
+                                <span class="invalid-msg-placeholder">
+                                    <span class="k-invalid-msg" data-for="Password"></span>
+                                </span>
+                            </span>
+                        </p>
+                        <p>
+                            <input id="RedirectUrl" name="RedirectUrl" type="hidden" value="/claim" />
+                            <button type="submit" class="k-button" name="Login">Log In</button>
+                        </p>
+                        <div class="actions">
+                            <a href="https://authentication.pmi.org/help/forgotUserName.aspx">Forgot Username</a>
+                            <a href="https://authentication.pmi.org/help/forgotPassword.aspx">Forgot Password</a>
+                        </div>
+                    </div>
+</form></section>
+        <section class="column column-span-2 dashboard-snippet">
+            <h2>Your New Dashboard</h2>
+            <p>The new dashboard will put all this information right at your fingertips.</p>
+            <div style="display: table;">
+                <ul>
+                    <li>The number of PDUs remaining to renew your certification</li>
+                    <li>The number of days until expiration</li>
+                    <li>How you are tracking against CCR requirements</li>
+                    <li>Summary of PDU claim details</li>
+                </ul>
+                <div class="k-chart chart-login" id="Login-Chart"></div><script>
+	jQuery(function(){jQuery("#Login-Chart").kendoChart({"legend":{"visible":false},"series":[{"name":"PDUs","type":"donut","data":[{"category":"Technical","value":12,"color":"#008DA3"},{"category":"Leadership","value":10,"color":"#00B0CC"},{"category":"Strategic \u0026 Business","value":3,"color":"#1BD0EC"},{"category":"Work as a Practitioner","value":5,"color":"#F8A700"},{"category":"Other Giving Back","value":10,"color":"#FFC800"},{"category":"General Education","value":0,"color":"#C45B73"},{"category":"Remaining","value":15,"color":"#EDEDED"}],"padding":0,"labels":{"visible":false},"holeSize":40}],"seriesDefaults":{"donut":{"highlight":{"visible":false},"startAngle":90,"overlay":null}},"transitions":false,"tooltip":{"visible":false}});});
+</script>
+            </div>
+        </section>
+    </div>
+</article>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('form').kendoValidator({
+            validate: function (e) {
+                $('article.login .k-invalid-msg').css('visibility', e.valid ? 'hidden' : 'visible').css('display', 'block');
+            }
+        });
+    });
+</script>
+            </section>
+        </div>
+
+
+
+        
+		<footer class="fxm">
+			<div class="footer-wrapper" itemscope itemtype="http://schema.org/WPFooter">
+				<div class="footer-bars">
+					<div class="bar-1"></div>
+					<div class="bar-2"></div>
+					<div class="bar-3"></div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-12">
+							<p class="copyright">&copy;&nbsp;2017&nbsp;Project Management Institute, Inc.<span style="margin-left:20px;background: url('https://static.pmi.org/assets/img/usa_flag.svg') no-repeat center left;background-size: 27px;padding-left: 31px;color: #fff;font-size: 14px;">USA</span></p>
+							<div class="footer-links">
+								<ul class="list-unstyled">
+									<li>
+										<a href='//www.pmi.org/privacy'>Privacy</a>
+									</li>
+									<li>
+										<a href='//www.pmi.org/sitemap-page'>Sitemap</a>
+									</li>
+									<li>
+										<a href='//www.pmi.org/terms'>Terms</a>
+									</li>
+									<li>
+										<a href='//www.pmi.org/about/advertising-sponsorship'>Advertising Sponsorship</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+    </div>
+
+    <script type="text/javascript" src="/content/scripts/events.js?636562142623575007"></script>
+    <script type="text/javascript" src="/content/scripts/functions.js?636562142623575007"></script>
+    <script type="text/javascript" src="/content/scripts/reporting-ui.js?636562142623575007"></script>
+    <script type="text/javascript" src="/content/scripts/webanalytics.js?636562142623575007"></script>
+
+    
+
+        <script type="text/javascript">
+            PmiTag.Channel = "CCRS";
+        </script>
+        <script type="text/javascript">_satellite.pageBottom();</script>
+</body>
+</html>
